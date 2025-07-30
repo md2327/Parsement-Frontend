@@ -1,0 +1,57 @@
+@import "../../vars.css";
+
+/* begin scan btn + loading bar */
+.scanContent {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20%;
+  margin-top: 3%;
+}
+/* begin scan btn */
+.scanBtn {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: var(--color-btn);
+  background: var(--color-btn);
+  color: var(--color-primary);
+}
+.scanBtn:hover {
+  cursor: pointer;
+  background-color: var(--color-btnDark);
+}
+/* white progress container */
+.progressContainer {
+  display: flex;
+  width: 54rem;
+  height: 30%;
+  margin-left: 25%;
+  margin-right: 3%;
+  padding: 18px;
+  background-color: var(--color-primary);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+/* scan progress */
+.progressBar {
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  color: var(--color-primary);
+  background-color: darkgray;
+}
+/* small screen */
+@media screen and (max-width: 830px) {
+  .progressContainer {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .scanContent {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
