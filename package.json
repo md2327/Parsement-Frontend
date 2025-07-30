@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm install --prefix client && npm run build  --prefix client && npx copyfiles client/dist/**/* server/client -u 2",
+    "build": "npm run build:client && npm run copy:client",
+    "build:client": "npm run build --prefix client",
+    "copy:client": "copyfiles -u 1 client/dist/**/* server/public",
     "start": "node server/server.js"
   },
   "dependencies": {
