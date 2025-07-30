@@ -30,7 +30,7 @@ const apiKey = process.env.API_KEY; // securely stores api key in .env
 app.post("/parse", upload.single("file"), async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json(); // returns 400 if no file is uploaded
+      return res.status(400).json({ error: "No file uploaded" }); // returns 400 if no file is uploaded
     }
     
     // make POST request to APILayer
@@ -48,8 +48,8 @@ app.post("/parse", upload.single("file"), async (req, res) => {
   } catch (error) {
     console.error("Error parsing resume:", error.message);
     res.status(500).json({ error: error.message });
-      }
-  });
+  }
+});
 
 // static file serving and catch-all route for frontend
 app.use(express.static(path.join(__dirname, "client"))); // for static frontend deployment to Render
