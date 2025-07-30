@@ -5,11 +5,9 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
-const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const multer = require("multer"); // parses file uploads in express
-const path = require("path");
 
 const corsOption = { origin: ["http://localhost:5173"] };
 app.use(cors(corsOption));
