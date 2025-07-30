@@ -9,11 +9,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const multer = require("multer"); // parses file uploads in express
-const app = express(); // instance of express
 const path = require("path");
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const corsOption = { origin: ["http://localhost:5173"] };
 app.use(cors(corsOption));
@@ -46,11 +42,15 @@ app.post("/parse", upload.single("file"), async (req, res) => {
   }
 });
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const app = express(); // instance of express
+const PORT = process.env.PORT || 8080;
+
+// build frontend
 app.use(express.static(path.join(__dirname, "client"))); // for deployment to Render
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "index.html"));
 });
 
-app.listen(8080, () => {
-  console.log("Server listening on 8080");
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
