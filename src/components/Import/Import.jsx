@@ -81,7 +81,7 @@ export const Import = ({ onFileUpload, onTextFill, onFileContent }) => {
           />
           <div className={styles.fileView}>
             <img
-              src="public/assets/Intro/downloadIcon.png"
+              src="public/assets/images/downloadIcon.png"
               alt="Download icon"
             />
             {!fileUploaded ? (
