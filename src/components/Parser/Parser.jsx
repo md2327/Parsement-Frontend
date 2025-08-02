@@ -16,7 +16,7 @@ export const Parser = ({ onSelection, selection }) => {
           <button
             className={styles.withApiBtn}
             style={{
-              backgroundColor: selection === "api" ? "#706f6f" : "#808080",
+              backgroundColor: selection === "api" ? "#706f6f" : "#adabab",
             }}
             onClick={() => {
               onSelection("api"); // notifies parent component of selection
@@ -33,7 +33,7 @@ export const Parser = ({ onSelection, selection }) => {
           <button
             className={styles.withoutApiBtn}
             style={{
-              backgroundColor: selection === "noapi" ? "#706f6f" : "#808080",
+              backgroundColor: selection === "noapi" ? "#706f6f" : "#adabab",
             }}
             onClick={() => {
               onSelection("noapi"); // notifies parent component of selection

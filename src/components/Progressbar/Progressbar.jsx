@@ -38,7 +38,7 @@ export const Progressbar = ({
   // progress bar color based on progress
   const progressColor = () => {
     if (progress === 0) {
-      return "darkgray"; // grey at 0%
+      return "#adabab"; // grey at 0%
     } else if (progress > 0 && progress <= 20) {
       return "#c70d0dff"; // red at <20
     } else if (progress > 20 && progress <= 50) {
