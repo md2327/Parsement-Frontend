@@ -1,41 +1,42 @@
 @import "../../vars.css";
 * {
   margin: 0;
-  padding: 10px;
+  padding: 0;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 /* white box for file container */
 .container {
   display: flex;
   background-color: var(--color-primary);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
   width: 60%;
-  min-height: 50vh;
+  height: 60%;
   align-items: center;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 7%;
   margin-left: 20%;
 }
-/* applyzer title */
+/* parsement title */
 .title {
   display: flex;
   justify-content: center;
-  font-size: 50px;
-  margin: 10px;
+  font-size: 38px;
+  margin: 3%;
 }
-/* applyzer description */
+/* parsement description */
 .description {
   text-align: center;
   width: 70%;
-  font-size: 30px;
+  font-size: 25px;
+  margin-top: -1%;
   margin-left: 15%;
 }
 /* drop box */
 .dropArea {
   width: 100%;
-  height: 400px;
-  padding: 20px;
+  height: 100%;
+  padding: 2%;
   background-color: #fff;
   text-align: center;
 }
@@ -44,66 +45,76 @@
   display: flex;
   width: 100%;
   height: 100%;
-  font-size: 25px;
-  border-radius: 7px;
-  border: 2px dashed #bbb5ff;
+  font-size: 20px;
+  padding-bottom: 10%;
+  border: 1px dashed #bbb5ff;
   background-color: #f7f8ff;
   flex-direction: column;
   align-items: center;
 }
 /* the download img */
 .fileView img {
-  width: 7rem;
+  width: 5rem;
   margin-top: 10%;
+  margin-bottom: 5%;
   align-items: center;
 }
 /* white box for text container */
 .textContainer {
   display: flex;
+  color: var(--color-secondary);
   background-color: var(--color-primary);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
   flex-direction: column;
-  border-radius: 7px;
-  width: 60%;
-  min-height: 10vh;
-  color: var(--color-secondary);
   justify-content: center;
+  width: 60%;
   margin-top: 3%;
   margin-left: 20%;
+  font-size: 12px;
 }
 /* text box */
 .textArea {
-  width: 97%;
+  min-width: 96%;
   resize: vertical;
-  min-height: 50px; /* dynamic height */
-  margin: 15px;
-  padding-left: 10px;
+  margin: 2%;
+  padding-left: 1%;
+  padding-top: 1%;
+  padding-bottom: 3%;
   background-color: #fff;
-  border-radius: 7px;
-  font-size: 15px;
   box-sizing: border-box;
   overflow-y: auto; /* scroll bar */
+}
+/* length of text */
+.textContainer span {
+  padding-left: 2%;
+  padding-bottom: 2%;
 }
 /* smaller screen */
 @media screen and (max-width: 830px) {
   .container {
-    width: 100%;
-    margin-top: 5%;
-    margin-left: 0;
+    width: 90%;
+    height: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+    padding: 2%;
   }
   .description {
     width: 100%;
     margin-left: 0;
+    font-size: 20px;
   }
   .fileView img {
-    margin-top: 18%;
+    padding-bottom: 4%;
   }
   .textContainer {
-    width: 100%;
+    width: 90%;
     padding-right: 1rem;
-    margin-left: 0%;
+    margin-left: 5%;
   }
   .textArea {
-    width: 97%;
+    width: 96%;
+    margin-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 6%;
   }
 }

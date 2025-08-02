@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Import.module.css";
+import downloadIcon from "../../../public/assets/images/downloadIcon.png";
 
 // props
 export const Import = ({ onFileUpload, onTextFill, onFileContent }) => {
@@ -80,10 +81,7 @@ export const Import = ({ onFileUpload, onTextFill, onFileContent }) => {
             hidden
           />
           <div className={styles.fileView}>
-            <img
-              src="public/assets/images/downloadIcon.png"
-              alt="Download icon"
-            />
+            <img src={downloadIcon} alt="Download icon" />
             {!fileUploaded ? (
               <p>Drop Files Here or Click to Upload</p>
             ) : (
@@ -100,7 +98,7 @@ export const Import = ({ onFileUpload, onTextFill, onFileContent }) => {
           onChange={handleTextArea}
           required
         />
-        <span style={{ color: "var(--color-secondary)" }}>
+        <span>
           Length of Text: {textContent ? textContent.length : 0} characters
         </span>
       </div>
