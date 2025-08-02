@@ -63,8 +63,7 @@ export const Import = ({ onFileUpload, onTextFill, onFileContent }) => {
     <section>
       <h1 className={styles.title}>Parsement</h1>
       <div className={styles.description}>
-        A tool intended for students and job seekers. Simply import your resume
-        and job description, then select a parsing option to begin scan.
+        The tool that makes applying to jobs fun.
       </div>
       <div className={styles.container}>
         <label

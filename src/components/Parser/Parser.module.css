@@ -1,21 +1,22 @@
 @import "../../vars.css";
 
+* {
+  border-radius: 5px;
+}
 /* white box for container */
 .container {
-  display: flex;
   flex-direction: column;
   background-color: var(--color-primary);
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
   width: 60%;
-  min-height: 10vh;
+  height: 60%;
   margin-top: 3%;
   margin-left: 20%;
-  padding: 20px;
+  padding: 2%;
 }
 /* select an option title */
 .title {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   color: var(--color-text);
   text-align: left;
@@ -27,48 +28,44 @@
   text-align: center;
   flex-direction: row;
   justify-content: center;
-  padding-top: 0px;
+  padding-top: 3%;
+  font-size: 14px;
 }
-/**/
+/* With or without api */
 .selectTitle {
-  font-size: 18px;
+  font-size: 11px;
 }
 .description {
-  padding: 3px;
+  padding: 1%;
 }
 /* with api btn */
 .withApiBtn {
-  display: inline-block;
-  width: 70%;
-  padding: 15px;
-  font-size: 18px;
+  width: 60%;
+  padding: 3%;
   font-weight: bold;
-  border-radius: 7px;
-  border-color: #adabab;
+  border-color: #8d8b8b;
   color: var(--color-primary);
-  margin-right: 3px;
 }
 /* without api btn */
 .withoutApiBtn {
-  display: inline-block;
-  width: 60%;
-  padding: 15px;
-  font-size: 18px;
+  width: 50%;
+  padding: 3%;
   font-weight: bold;
-  border-radius: 7px;
-  border-color: #adabab;
+  border-color: #808080;
   color: var(--color-primary);
-  margin-right: 3px;
 }
 .withApiBtn:hover,
 .withoutApiBtn:hover {
   cursor: pointer;
-  background-color: #706f6f;
+  background-color: #808080;
 }
 /* small screen */
 @media screen and (max-width: 830px) {
   .container {
-    width: 95%;
-    margin-left: 3%;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .content {
+    font-size: 12px;
   }
 }

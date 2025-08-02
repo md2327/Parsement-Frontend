@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Parser.module.css";
 import "../../vars.css";
 
@@ -11,15 +11,12 @@ export const Parser = ({ onSelection, selection }) => {
         <div className={styles.withApi}>
           <h3 className={styles.selecTitle}>With API:</h3>
           <p className={styles.description}>
-            Parse both resume and job description for matching skills
-          </p>
-          <p style={{ paddingTop: "3px", paddingBottom: "10px" }}>
-            Note: There is a limit on API calls
+            Parses both resume and job description for matching skills
           </p>
           <button
             className={styles.withApiBtn}
             style={{
-              backgroundColor: selection === "api" ? "#706f6f" : "#adabab",
+              backgroundColor: selection === "api" ? "#706f6f" : "#808080",
             }}
             onClick={() => {
               onSelection("api"); // notifies parent component of selection
@@ -31,15 +28,12 @@ export const Parser = ({ onSelection, selection }) => {
         <div className={styles.withoutApi}>
           <h3 className={styles.selecTitle}>Without API:</h3>
           <p className={styles.description}>
-            Parse only job description for significant skills and job details
-          </p>
-          <p style={{ paddingTop: "3px", paddingBottom: "8px" }}>
-            Note: Database only contains Computer Science terms
+            Parses only job description for significant skills and job details
           </p>
           <button
             className={styles.withoutApiBtn}
             style={{
-              backgroundColor: selection === "noapi" ? "#706f6f" : "#adabab",
+              backgroundColor: selection === "noapi" ? "#706f6f" : "#808080",
             }}
             onClick={() => {
               onSelection("noapi"); // notifies parent component of selection
