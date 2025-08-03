@@ -63,7 +63,7 @@ export const Import = ({ onFileUpload, onTextFill, onFileContent }) => {
     <section>
       <h1 className={styles.title}>Parsement</h1>
       <div className={styles.description}>
-        The tool that makes applying to jobs fun.
+        The tool that makes job hunting fun.
       </div>
       <div className={styles.container}>
         <label

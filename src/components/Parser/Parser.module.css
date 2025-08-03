@@ -44,7 +44,7 @@
   width: 60%;
   padding: 3%;
   font-weight: bold;
-  border-color: #8d8b8b;
+  border-color: #adabab;
   color: var(--color-primary);
 }
 /* without api btn */
@@ -52,7 +52,7 @@
   width: 50%;
   padding: 3%;
   font-weight: bold;
-  border-color: #808080;
+  border-color: #adabab;
   color: var(--color-primary);
 }
 .withApiBtn:hover,

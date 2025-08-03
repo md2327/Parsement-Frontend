@@ -33,7 +33,7 @@ export const Results = ({
 
       // makes POST request to backend
       const response = await axios.post(
-        "http://localhost:8080/parse",
+        "https://parsement-backend.onrender.com/",
         formData
       );
       setParsedData(response.data); // set parsed data
