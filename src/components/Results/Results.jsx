@@ -34,7 +34,12 @@ export const Results = ({
       // makes POST request to backend
       const response = await axios.post(
         "https://parsement-backend.onrender.com/parse",
-        formData
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/octet-stream",
+          },
+        }
       );
       setParsedData(response.data); // set parsed data
       setAccuracyApi(true);
