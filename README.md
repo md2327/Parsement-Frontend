@@ -17,7 +17,7 @@ Simply import your resume, job description, and select a parsing option to begin
 
 ## Tech Stack
 
-**Client:** HTML, CSS, React + Vite
+**Client:** HTML, CSS, JavaScript, React + Vite
 
 **Server:** Node, Express
 
